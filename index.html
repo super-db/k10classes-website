@@ -225,21 +225,35 @@
 
       <!-- Desktop / Tablet Header CTAs -->
       <div class="flex items-center gap-2">
-        <button onclick="openStaffPortalModal()" class="hidden md:inline-flex px-3 py-2 rounded-xl border border-slate-200 hover:border-brand-500 hover:text-brand-600 text-slate-700 font-bold text-xs transition-all items-center gap-1.5 shadow-xs bg-white" title="Teacher & Developer Login">
+        <!-- Premium Student Portal Header Button -->
+        <a 
+          href="https://k10-student-portal.superdb.chatgpt.site" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="hidden sm:inline-flex px-3 py-2 sm:px-3.5 sm:py-2 rounded-xl bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-xs transition-all items-center gap-1.5 shadow-md shadow-amber-500/20 hover:shadow-lg hover:shadow-amber-500/30 border border-amber-300 hover:scale-[1.03] active:scale-95 group shrink-0" 
+          title="Open K10 Student Portal"
+        >
+          <span class="w-1.5 h-1.5 rounded-full bg-slate-950 animate-pulse"></span>
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-slate-950 group-hover:rotate-12 transition-transform"></i>
+          <span class="tracking-tight">Student Portal</span>
+          <i data-lucide="external-link" class="w-3 h-3 text-slate-800 opacity-70 group-hover:opacity-100"></i>
+        </a>
+
+        <button onclick="openStaffPortalModal()" class="hidden xl:inline-flex px-3 py-2 rounded-xl border border-slate-200 hover:border-brand-500 hover:text-brand-600 text-slate-700 font-bold text-xs transition-all items-center gap-1.5 shadow-xs bg-white shrink-0" title="Teacher & Developer Login">
           <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-600"></i>
           <span id="navStaffPortalLabel">Staff Login</span>
         </button>
-        <a href="tel:+919854443486" class="hidden sm:inline-flex px-3 py-2 rounded-xl border border-slate-200 text-slate-700 hover:border-brand-500 hover:text-brand-600 font-bold text-xs transition-all items-center gap-1.5 shadow-xs bg-white" title="Call K10 Classes">
+        <a href="tel:+919854443486" class="hidden md:inline-flex px-3 py-2 rounded-xl border border-slate-200 text-slate-700 hover:border-brand-500 hover:text-brand-600 font-bold text-xs transition-all items-center gap-1.5 shadow-xs bg-white shrink-0" title="Call K10 Classes">
           <i data-lucide="phone-call" class="w-3.5 h-3.5 text-brand-600"></i>
           <span>Call</span>
         </a>
-        <button onclick="openAdmissionModal()" class="px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-bold text-xs sm:text-sm shadow-md transition-all flex items-center gap-1.5">
+        <button onclick="openAdmissionModal()" class="px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-bold text-xs sm:text-sm shadow-md transition-all flex items-center gap-1.5 shrink-0">
           <i data-lucide="graduation-cap" class="w-4 h-4"></i>
           <span>Admission</span>
         </button>
         
         <!-- Mobile/Tablet Hamburger Button (Clean 3-line menu) -->
-        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 border border-slate-200 transition-colors ml-1" aria-label="Toggle navigation drawer">
+        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 border border-slate-200 transition-colors ml-1 shrink-0" aria-label="Toggle navigation drawer">
           <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
         </button>
       </div>
@@ -267,6 +281,33 @@
 
     <!-- Drawer Navigation Links (Categorized & Scrollable) -->
     <div class="flex-1 overflow-y-auto p-3 sm:p-4 space-y-1">
+      
+      <!-- Premium Student Portal Highlight Card in Mobile Drawer -->
+      <a 
+        href="https://k10-student-portal.superdb.chatgpt.site" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        onclick="toggleMobileMenu()" 
+        class="flex items-center justify-between p-3 sm:p-3.5 rounded-2xl bg-gradient-to-r from-amber-500/15 via-amber-400/10 to-indigo-500/10 border-2 border-amber-400 shadow-md shadow-amber-500/15 group hover:border-amber-500 hover:scale-[1.01] transition-all mb-3 relative overflow-hidden"
+      >
+        <div class="absolute -top-10 -right-10 w-24 h-24 bg-amber-400/20 rounded-full blur-xl pointer-events-none"></div>
+        <div class="flex items-center gap-3 relative z-10">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-500 text-slate-950 flex items-center justify-center shadow-md font-black shrink-0 group-hover:scale-105 group-hover:rotate-6 transition-transform">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-sm font-extrabold text-slate-900 flex items-center gap-1.5">
+              <span>Student Portal</span>
+              <span class="px-1.5 py-0.2 rounded text-[9px] font-black bg-amber-400 text-slate-950 uppercase tracking-wider shadow-xs">PORTAL</span>
+            </div>
+            <div class="text-[11px] font-medium text-amber-900/80">Login to study materials, tests & portal</div>
+          </div>
+        </div>
+        <div class="w-7 h-7 rounded-xl bg-amber-400/20 text-amber-800 flex items-center justify-center group-hover:bg-amber-400 group-hover:text-slate-950 transition-all shrink-0">
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        </div>
+      </a>
+
       <div class="text-[10px] font-extrabold uppercase tracking-widest text-slate-400 px-3 py-1">All Navigation Pages</div>
       
       <a href="#home" onclick="toggleMobileMenu()" class="flex items-center justify-between p-2.5 sm:p-3 rounded-2xl hover:bg-brand-50 text-slate-800 hover:text-brand-700 transition-colors group">
@@ -403,7 +444,13 @@
         <span>Apply for Admission 2026-27</span>
       </button>
 
-      <button onclick="openStaffPortalModal(); toggleMobileMenu();" class="w-full py-2.5 rounded-2xl border border-slate-300 text-slate-700 font-bold text-xs flex items-center justify-center gap-2 hover:bg-white transition-colors">
+      <!-- Student Portal Primary Action in Drawer Footer -->
+      <a href="https://k10-student-portal.superdb.chatgpt.site" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-xs flex items-center justify-center gap-2 shadow-md shadow-amber-400/20 border border-amber-300 transition-all">
+        <i data-lucide="sparkles" class="w-4 h-4 text-slate-950"></i>
+        <span>Open Student Portal ↗</span>
+      </a>
+
+      <button onclick="openStaffPortalModal(); toggleMobileMenu();" class="w-full py-2 rounded-2xl border border-slate-300 text-slate-700 font-bold text-xs flex items-center justify-center gap-2 hover:bg-white transition-colors">
         <i data-lucide="shield-check" class="w-4 h-4 text-brand-600"></i>
         <span>Teacher & Admin Portal</span>
       </button>
@@ -3630,6 +3677,7 @@
         <div>
           <h4 class="font-bold text-white uppercase text-xs tracking-wider mb-4 font-heading">Institute Highlights</h4>
           <ul class="space-y-2 text-xs">
+            <li><a href="https://k10-student-portal.superdb.chatgpt.site" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 transition-colors"><i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Student Portal (Online Login) ↗</a></li>
             <li><a href="#facilities" class="hover:text-white transition-colors">Facilities at K10</a></li>
             <li><a href="#roadmap" class="hover:text-white transition-colors">Course Completion Roadmap</a></li>
             <li><a href="#results" class="hover:text-white transition-colors">Himutjal Chetia NEE-I Success</a></li>
